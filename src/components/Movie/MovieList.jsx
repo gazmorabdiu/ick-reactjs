@@ -2,7 +2,7 @@ import Movie from "./Movie";
 import { MovieDataSet } from "./data/MovieDataSet";
 import "./movies.css";
 
-const MoviesList = () => {
+const MovieList = () => {
   return (
     <div className="container">
       {MovieDataSet.map(
@@ -38,4 +38,4 @@ const MoviesList = () => {
   );
 };
 
-export default MoviesList;
+export default MovieList;

@@ -1,9 +1,12 @@
-import MoviesList from "./components/MoviesList";
+// import MovieList from "./components/Movie/MovieList";
+
+import TaskList from "./components/Task/TaskList";
 
 function App() {
   return (
     <div>
-      <MoviesList />
+      {/* <MovieList /> */}
+      <TaskList />
     </div>
   );
 }
