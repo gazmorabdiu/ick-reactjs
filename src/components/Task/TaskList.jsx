@@ -5,6 +5,7 @@ import Task from "./Task";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState(TaskDataSet);
+
   const handleCompleteTask = (position) => {
     const completeTask = tasks.map((task) => {
       if (task.id === position) {
@@ -18,6 +19,7 @@ const TaskList = () => {
     const filteredTasks = tasks.filter(({ id }) => id !== position);
     setTasks(filteredTasks);
   };
+
   return (
     <div className="container">
       {tasks.map(({ id, title, description, completed, difficulty }) => {
