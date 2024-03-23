@@ -1,0 +1,122 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 10px;
+}
+.contact-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+}
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 2px 2px rgb(6, 180, 223);
+}
+.add-contact {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(6, 180, 223);
+}
+
+.add-contact:hover {
+  cursor: pointer;
+  background-color: rgb(6, 180, 223);
+  color: white;
+}
+
+.contact-list {
+  /* border: 1px solid black; */
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-card:nth-child(odd) {
+  background: #bde0fe;
+}
+/* .contact-card:nth-child(even) {
+    background: green;
+} */
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.contact-img {
+  width: 50px;
+  border-radius: 50%;
+}
+.contact-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.remove-contact {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.remove-contact:hover {
+  cursor: pointer;
+  background-color: #f4a261;
+}
+
+.add-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid black;
+  background-color: #caf0f8;
+  border-radius: 5px;
+  padding: 5px;
+}
+.add-contact-form input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: medium;
+}
+.add-contact-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-contact-form div span {
+  padding: 0px 10px;
+  color: rgb(212, 54, 54);
+}
+.save-contact {
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: medium;
+  cursor: pointer;
+}
+.save-contact:hover {
+  font-weight: bold;
+}
