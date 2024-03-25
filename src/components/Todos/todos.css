@@ -62,3 +62,14 @@
   justify-content: space-between;
   /* border: 1px solid black; */
 }
+
+.item-remove:hover {
+  color: black;
+  cursor: pointer;
+}
+.add-todo:hover {
+  cursor: pointer;
+}
+.item-checker:hover {
+  cursor: pointer;
+}

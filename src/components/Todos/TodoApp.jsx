@@ -8,18 +8,6 @@ const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [unCompleteTodo, setUnCompleteTodo] = useState(0);
 
-  const sortArrayByChecked = (array) => {
-    return array.toSorted((a, b) => {
-      if (a.checked && !b.checked) {
-        return 1;
-      } else if (!a.checked && b.checked) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-  };
-
   useEffect(() => {
     const count = todos.filter((todo) => !todo.checked).length;
     setUnCompleteTodo(count);
@@ -32,17 +20,18 @@ const TodoApp = () => {
       const localTime = date.toLocaleTimeString();
 
       // const
-      const sortedArray = sortArrayByChecked(todos);
 
-      setTodos([
-        ...sortedArray,
-        {
-          id,
-          title: newTodo,
-          checked: false,
-          createdAt: `${localDate} ${localTime}`,
-        },
-      ]);
+      setTodos((prev) => {
+        return [
+          ...prev,
+          {
+            id,
+            title: newTodo,
+            checked: false,
+            createdAt: `${localDate} ${localTime}`,
+          },
+        ];
+      });
       setNewTodo("");
     }
   };
@@ -57,9 +46,8 @@ const TodoApp = () => {
     const update = todos.map((todo) =>
       todo.id === position ? { ...todo, checked: true } : todo
     );
-    const sortTodos = sortArrayByChecked(update);
 
-    setTodos(sortTodos);
+    setTodos(update);
 
     // setTodos(update);
   };
