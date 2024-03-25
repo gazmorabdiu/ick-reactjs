@@ -1,0 +1,60 @@
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  min-width: 350px;
+  border: 1px solid black;
+  margin: 5px 0;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e2e0e0;
+  gap: 10px;
+}
+.todo-list {
+  overflow-y: scroll;
+}
+
+.todo-list::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Track (the area on which the scrollbar is rendered) */
+.todo-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.todo-list::-webkit-scrollbar-thumb {
+  background: rgb(207, 198, 198); /* Color of the handle */
+  border-radius: 2px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.todo-list::-webkit-scrollbar-thumb:hover {
+  background: #ca9393; /* Darker color on hover */
+}
+
+.item-remove {
+  font-size: 20px;
+  color: red;
+}
+.add-todo {
+  width: 350px;
+  padding: 10px 10px 10px 15px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.item-title {
+  flex-grow: 10;
+}
