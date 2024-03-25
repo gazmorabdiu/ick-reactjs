@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddTodo } from "./AddTodo";
 import List from "./List";
 import "./todos.css";
@@ -6,6 +6,12 @@ import "./todos.css";
 const TodoApp = () => {
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState([]);
+  const [unCompleteTodo, setUnCompleteTodo] = useState(0);
+
+  useEffect(() => {
+    const count = todos.filter((todo) => !todo.checked).length;
+    setUnCompleteTodo(count);
+  }, [todos]);
   const handleEnterKey = (e) => {
     if (e.code === "Enter" && newTodo !== "") {
       const id = (Math.random() + 1).toString(36).substring(7);
@@ -36,6 +42,7 @@ const TodoApp = () => {
         makeDone={handleMakeDone}
         removeTodo={handleRemoveTodo}
       />
+      <span style={{ color: "red" }}>{unCompleteTodo} todo left</span>
       <AddTodo
         onKeyDown={handleEnterKey}
         onChange={handleAddTodo}
