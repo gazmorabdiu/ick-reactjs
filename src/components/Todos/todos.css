@@ -55,6 +55,10 @@
   margin-bottom: 20px;
 }
 
-.item-title {
+.item-content {
   flex-grow: 10;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
 }

@@ -6,8 +6,8 @@ const AddTodo = ({ onKeyDown, onChange, value }) => {
       placeholder="Add New Todo"
       className="add-todo"
       value={value}
-      onChange={(e) => onChange(e)}
-      onKeyDown={(e) => onKeyDown(e)}
+      onChange={onChange}
+      onKeyDown={onKeyDown}
     />
   );
 };

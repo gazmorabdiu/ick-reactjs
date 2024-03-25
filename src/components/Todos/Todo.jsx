@@ -1,4 +1,4 @@
-const Todo = ({ checked, title, makeDone, removeTodo }) => {
+const Todo = ({ checked, title, makeDone, removeTodo, createdAt }) => {
   const itemNewStyle = checked ? {} : { backgroundColor: "#f5f8fb" };
   const titleNewStyle = checked ? { textDecoration: "line-through" } : {};
   return (
@@ -6,8 +6,9 @@ const Todo = ({ checked, title, makeDone, removeTodo }) => {
       <div className="item-checker" onClick={makeDone}>
         {checked ? "✅" : "☐"}
       </div>
-      <div className="item-title" style={titleNewStyle}>
-        {title}
+      <div className="item-content">
+        <span style={titleNewStyle}>{title}</span>
+        <span>{createdAt}</span>
       </div>
       <div className="item-remove" onClick={removeTodo}>
         🗑
